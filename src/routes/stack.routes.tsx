@@ -7,16 +7,16 @@ import { Scheduling } from '../screen/Scheduling';
 import { SchedulingComplete } from '../screen/SchedulingComplete';
 import { SchedulingDetails } from '../screen/SchedulingDetails';
 
-const Stack = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 export default function StackRoutes() {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="CarDetails" component={CarDetails} options={{ headerShown: false }} />
-      <Stack.Screen name="Scheduling" component={Scheduling} options={{ headerShown: false }} />
-      <Stack.Screen name="SchedulingComplete" component={SchedulingComplete} options={{ headerShown: false }} />
-      <Stack.Screen name="SchedulingDetails" component={SchedulingDetails} options={{ headerShown: false }} />
-    </Stack.Navigator>
+    <Navigator initialRouteName="Home">
+      <Screen name="Home" component={Home} options={{ headerShown: false }} />
+      <Screen name="CarDetails" component={CarDetails} options={{ headerShown: false }} />
+      <Screen name="Scheduling" component={Scheduling} options={{ headerShown: false }} />
+      <Screen name="SchedulingComplete" component={SchedulingComplete} options={{ headerShown: false }} />
+      <Screen name="SchedulingDetails" component={SchedulingDetails} options={{ headerShown: false }} />
+    </Navigator>
   );
 }
